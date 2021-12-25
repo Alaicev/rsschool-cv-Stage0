@@ -18,45 +18,6 @@ At the moment I work in the center of Agrobototekhnika VR / AR technologies at t
 ```JavaScript
 //One of the tests "HTML Academy"
 
-var cardsData = [
-    {
-        inStock: true,
-        imgUrl: 'gllacy/choco.jpg',
-        text: 'Сливочно-кофейное с кусочками шоколада',
-        price: 310,
-        isHit: true,
-        specialOffer: 'Двойная порция сиропа бесплатно!'
-    },
-    {
-        inStock: false,
-        imgUrl: 'gllacy/lemon.jpg',
-        text: 'Сливочно-лимонное с карамельной присыпкой',
-        price: 125,
-        isHit: false
-    },
-    {
-        inStock: true,
-        imgUrl: 'gllacy/cowberry.jpg',
-        text: 'Сливочное с брусничным джемом',
-        price: 170,
-        isHit: false
-    },
-    {
-        inStock: true,
-        imgUrl: 'gllacy/cookie.jpg',
-        text: 'Сливочное с кусочками печенья',
-        price: 250,
-        isHit: false
-    },
-    {
-        inStock: true,
-        imgUrl: 'gllacy/creme-brulee.jpg',
-        text: 'Сливочное крем-брюле',
-        price: 190,
-        isHit: false
-    }
-];
-
 var createData = function (tagName, className, text) {
     var element = document.createElement(tagName);
     element.classList.add(className);
