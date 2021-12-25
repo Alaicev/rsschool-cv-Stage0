@@ -107,8 +107,8 @@ for (var i=0; i<cardsData.length; i++) {
 Zero work experience
 
 ### Education 
-[Saratov agrarian University of Nikolai Vavilov](https://www.sgau.ru/)
-Bachelor's degree
+[Saratov agrarian University of Nikolai Vavilov](https://www.sgau.ru/).
+Bachelor's degree,
 Master's degree (first course)
 
 ### English 
