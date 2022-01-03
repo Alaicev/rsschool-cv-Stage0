@@ -1,0 +1,138 @@
+body{
+    margin:0 auto;
+    padding: 0;
+    font-family: "Century Gothic", serif;
+    font-size: 1.5em;
+    line-height: 2em;
+    width: 1300px;
+}
+
+/*HEADER BLOCK------------------------------------------------*/
+
+header{
+    padding: 5px 50px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 50px 1100px;
+    row-gap: 50px;
+    align-items: center;
+
+}
+
+.toggle-theme {
+    border-radius: 50%;
+    position:relative;
+    width: 40px;
+    height: 40px;
+}
+
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+
+}
+
+.navigation li{
+    list-style: none;
+}
+
+.navigation a::before{
+    content: '';
+    position: absolute;
+    border-bottom:2px solid;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    border-bottom:2px solid;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+
+}
+
+
+.navigation li:hover a::before,
+.navigation li:hover a::after{
+    transition: 0.2s;
+    width: 50%;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: white;
+}
+
+.navigation li:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+/*MAIN BLOCK-------------------------------------------------*/
+main{
+    padding: 5px 0;
+    width: 1300px;
+    margin: 0 auto;
+}
+
+main section div:not(.name){
+    padding: 25px 50px;
+    margin: 0 auto;
+}
+
+/*---------My name and my photo----------------------------- */
+.mi{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.mi img {
+    border-radius: 50%;
+}
+
+.mi p{
+    margin-bottom: 0;
+}
+
+.mi div{
+    padding-bottom: 0;
+}
+
+    /*---------Example block----------------------------- */
+.code{
+    width: 75%;
+    padding: 10px 5px 5px;
+    margin: 50px auto;
+    background: #bdbdbd;
+}
+
+pre {
+    padding: 10px;
+    background: black;
+    color:white;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+footer{
+    padding:10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#7e7d7d, #b7b7b7);
+    color: white;
+}
+
+footer img  {
+    height: 50px;
+}
