@@ -1,0 +1,58 @@
+.light-theme{
+    background: #dedede;
+}
+
+.dark-theme{
+    background: black;
+}
+
+/*header theme----*/
+.light-theme header{
+    background: linear-gradient(#000375, #0025e1);
+}
+
+.light-theme footer{
+    background: linear-gradient(#0025e1, #000375);
+}
+
+.dark-theme header{
+    background: linear-gradient(#030303, #171717);
+}
+
+.dark-theme footer img{
+    filter: invert(100%);
+}
+
+.dark-theme footer{
+    background: linear-gradient(#171717, #030303);
+}
+
+.light-theme .toggle-theme {
+    background: #ffff00;
+}
+
+.dark-theme .toggle-theme {
+    background: #dedede;
+
+}
+
+.light-theme main{
+    background: white;
+    color: black;
+}
+
+.dark-theme main{
+    background: #0a0a0a;
+    color: white;
+}
+
+.light-theme main section:nth-child(2n) {
+    background: #f5f5f5;
+}
+
+.dark-theme main section:nth-child(2n) {
+    background: #2d2d2d;
+}
+
+
+

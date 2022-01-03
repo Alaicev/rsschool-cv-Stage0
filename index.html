@@ -1,49 +1,150 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Altarev Aleksandr</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CV</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
-        <div class="my-name">
-            <img src="my_photo.png" alt="">
-            <h2>Altarev Aleksandr</h2>
+<body class="light-theme">
+<header>
+    <!--Navigation block-->
+    <nav class="menu">
+        <button class="toggle-theme"></button>
+        <ul class="navigation">
+            <li><a href="#contact">Contact info</a></li>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#example">Code example</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <!--My name and my photo-->
+    <section>
+    <div class="mi">
+        <div class="name">
+            <h1>Altarev Aleksandr</h1>
+            <p>22 year<br>student RS School</p>
         </div>
-    </header>
-    <main>
-    <div>
-        <h3>Contact info</h3>
+        <img src="img/my_photo.png" alt="my photo">
+    </div>
+    </section>
+    <!--Contact block-->
+    <section>
+    <div class="contact" id="contact">
+        <h2>Contact info</h2>
         <ul>
-            <li><b>Email:</b> <a href="altarev123456@mail.ru">altarev123456@mail.ru</a></li>
-            <li><b>WatsApp:</b><a href="tel:89020488121">+7(902) 048-81-21</a></li>
-            <li><b>VK</b><a href="https://vk.com/alaisev">@alaisev</a></li>
+            <li><b>GitHab:</b><i> @Alaicev</i></li>
+            <li><b>Email:</b><i> altarev123456@mail.ru</i></li>
+            <li><b>WatsApp:</b><i> +7 (902) 048-81-21</i></li>
+            <li><b>VK:</b><i> https://vk.com/alaisev</i></li>
+            <li><b>Discord</b><i> makunga #6369</i></li>
         </ul>
     </div>
-    <div>
-        <h3>Summary</h3>
-        <p>At the moment I work in the center of Agrobototekhnika VR / AR technologies at the Saratov Agrarian University of Vavilov. Completely completed HTML Academy layout simulators. Winner of the grant "Development of improving the organization of technical service using augmented reality" in the nomination "Clever". I want to learn how to make up sites better than what is presented now</p>
+    </section>
+    <!--Summary block-->
+    <section>
+    <div class="summary" id="summary">
+        <h2>Summary</h2>
+        <p>At the moment I work in the center of Agrobototekhnika VR / AR technologies at the Saratov Agrarian University of Vavilov. Completely completed the simulators at HTML Academy.</p>
     </div>
-    <div>
-        <h3>Skills</h3>
-        <ul>
-            <li><b>HTML/CSS</b> - average level</li>
-            <li><b>JavaScript/LESS</b> - a basic level</li>
-        </ul>
+    </section>
+    <!--Skills block-->
+    <section>
+    <div class="skills" id="skills">
+        <h2>Skills</h2>
+        <p><b>HTML & CSS</b> - average level</p>
+        <p><b>JavaScript & LESS</b> - basis level</p>
     </div>
-    <div>
-        <h3>Education</h3>
-        <p><a href="https://www.sgau.ru/">Saratov agrarian University of Nikolai Vavilov</a><br>Bachelor's degree,<br>Master's degree</p>
-    </div>
-    </main>
-    <footer>
-        <p>Altarev Aleksandr</p>
-        <div>
-            <a class="Email" href="altarev123456@mail.ru"></a>
-            <a class="tel" href="tel:89020488121"></a>
-            <a class="vk" href="https://vk.com/alaisev"></a>
+    </section>
+    <!--Example code-->
+    <section>
+    <div class="example" id="example">
+        <h2>Code example</h2>
+        <p>Trial for HTML Academy</p>
+        <div class="code">
+            <pre>
+                var createData = function (tagName, className, text) {
+                    var element = document.createElement(tagName);
+                    element.classList.add(className);
+                    if (text) {
+                        element.textContent = text
+                    }
+                    return element
+                }
+
+                var createCard = function (product) {
+                    var listItem = createData('li','good');
+
+                    var title = createData('h2', 'good__description', product.text);
+                    listItem.appendChild(title);
+
+                    var picture = createData('img', 'good__image');
+                    picture.src = product.imgUrl;
+                    picture.alt = product.text;
+                    listItem.appendChild(picture);
+
+                    var price = createData('p', 'good__price', product.price + '₽/кг');
+                    listItem.appendChild(price);
+
+                    var stockClass = 'good--available'
+                    if (!product.inStock) {
+                        stockClass = 'good--unavailable'
+                    }
+                    listItem.classList.add(stockClass);
+
+                    if(product.isHit) {
+                        listItem.classList.add('good--hit')
+                        var specialPrise = createData('p', 'good__special-offer', product.specialOffer)
+                        listItem.appendChild(specialPrise);
+                    }
+
+                    return listItem;
+                }
+
+                var cardsList = document.querySelector('.goods')
+
+                for (var i=0; i < cardsData.length; i++) {
+                    var card = createCard(cardsData[i])
+                    cardsList.appendChild(card)
+                }
+            </pre>
         </div>
-    </footer>
+    </div>
+    </section>
+    <!--Experience block-->
+    <section>
+    <div class="experience" >
+        <h2>Experience</h2>
+        <p>I am currently developing a business card site for our establishment</p>
+    </div>
+    </section>
+    <!--Education block-->
+    <section>
+    <div class="education" id="education">
+        <h2>Education</h2>
+        <p>Saratov agrarian University of Nikolai Vavilov</p>
+        <p>Bachelor's degree<br>Master's degree (first course)</p>
+    </div>
+    </section>
+    <!--English-->
+    <section>
+    <div class="English">
+        <h2>English</h2>
+        <p>Pre-intermediate</p>
+    </div>
+    </section>
+</main>
+<footer>
+    <p>2022</p>
+    <a href="https://github.com/Alaicev"><img src="img/GitHub.svg" alt="GitHub"></a>
+    <a href="https://app.rs.school/"><img class="rs-school" src="img/rs_school_js.svg" alt=""></a>
+</footer>
+<script src="js/script.js"></script>
 </body>
 </html>
